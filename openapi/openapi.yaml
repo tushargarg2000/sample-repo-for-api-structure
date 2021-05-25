@@ -1,6 +1,6 @@
 openapi: 3.0.2
 info:
-  version: 1.0.0
+  version: 1.0.12345
   title: Example.com
   termsOfService: 'https://example.com/terms/'
   contact:
@@ -57,14 +57,21 @@ tags:
     description: Example echo operations
   - name: User
     description: Operations about user
+  - name : Inventory 
+    description : This is the added sample for inventory section and is used to denote out some stuff of the inventory part...
+
 servers:
   - url: 'http://example.com/api/v1'
+  - url: 'https://example.com/api/v1'
   - url: 'https://example.com/api/v1'
 paths:
   '/users/{username}':
     $ref: 'paths\users@{username}.yaml'
   /echo:
     $ref: paths\echo.yaml
+  /inventory1:
+    $ref : paths\inventory.yaml  
+
 components:
   securitySchemes:
     main_auth:
