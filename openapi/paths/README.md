@@ -29,7 +29,6 @@ In addition, Redocly recommends placing path parameters within `{}` curly braces
 
 * Only the "file-per-path" option is semantically correct with the OpenAPI Specification 3.0.2.  However, Redocly's openapi-cli will build valid bundles for any of the other options too.
 
-
 #### Drawbacks
 
 * This may require multiple definitions per http method within a single file.
@@ -69,6 +68,7 @@ Example with path parameter:
 GET /customers/{id}
 
 /paths/customers/{id}/get.yaml
+
 ```
 
 #### Motivations

@@ -1,6 +1,7 @@
 # See https://redoc.ly/docs/cli/configuration/ for more information.
 apiDefinitions:
-  main: openapi/openapi.yaml
+  main : openapi/codegen.yaml
+  main1 : openapi/openapi.yaml
 lint:
   extends:
     - recommended

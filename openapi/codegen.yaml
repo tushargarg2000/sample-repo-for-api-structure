@@ -2,61 +2,64 @@ openapi: 3.0.0
 servers:
   # Added by API Auto Mocking Plugin
   - description: SwaggerHub API Auto Mocking
-    url: https://virtserver.swaggerhub.com/myntra179/FirstApi/1.0.0
+    url: https://virtserver.swaggerhub.com/myntra179/OAuth2-version/1.0.0
 info:
-  description: This is a simple API
   version: "1.0.0"
-  title: Simple Inventory API
-  contact:
-    email: try@myntra.com
+  title: Sample Access Code Flow OAuth2 Project
+  description: >-
+    This is an example of using OAuth2 Access Code Flow in a specification to
+    describe security to your API.
   license:
     name: Apache 2.0
     url: 'http://www.apache.org/licenses/LICENSE-2.0.html'
+security:
+  - accessCode:
+      - read
+      - write
 
 tags:
-  - name: admins
-    description: Secured Admin-only calls
-  - name: developers
-    description: Operations available to regular developers
+  - name: Example
+    description: Example is added by Tushar for trial purpose
+  - name : Tushar
+    description : This was to test get and post request under Tushar's foler 
+  - name : Tushar1 
+    description : This was to test if we are able to make good tags or not
 
 paths:
-  /inventory:
-    $ref : paths\inventory.yaml  
+  /example:
+    $ref : ./paths/example.yaml
+  /ping:
+    $ref : paths\ping.yaml
+  /pet:
+    post:
+      tags:
+        - Tushar
+      summary: Add a new pet to the store
+      operationId: addPet
+      responses:
+        '405':
+          description: Invalid input
+    put:
+      tags:
+        - Tushar
+      summary: Update an existing pet
+      operationId: updatePet
+      responses:
+        '400':
+          description: Invalid ID supplied
+        '404':
+          description: Pet not found
+        '405':
+          description: Validation exception
 components:
-  schemas:
-    InventoryItem:
-      type: object
-      required:
-        - id
-        - name
-        - manufacturer
-        - releaseDate
-      properties:
-        id:
-          type: string
-          format: uuid
-          example: d290f1ee-6c54-4b01-90e6-d701748f0851
-        name:
-          type: string
-          example: Widget Adapter
-        releaseDate:
-          type: string
-          format: date-time
-          example: '2016-08-29T09:12:33.001Z'
-        manufacturer:
-          $ref: '#/components/schemas/Manufacturer'
-    Manufacturer:
-      required:
-        - name
-      properties:
-        name:
-          type: string
-          example: ACME Corporation
-        homePage:
-          type: string
-          format: url
-          example: 'https://www.acme-corp.com'
-        phone:
-          type: string
-          example: 408-867-5309
-      type: object
+  schemas: {}
+  securitySchemes:
+    accessCode:
+      type: oauth2
+      flows:
+        authorizationCode:
+          authorizationUrl: 'http://example.com/oauth/auth'
+          tokenUrl: 'http://example.com/oauth/token'
+          scopes:
+            write: allows modifying resources
+            read: allows reading resources
