@@ -1,0 +1,33 @@
+post:
+  tags:
+    - student-controller
+  summary: createStudent
+  operationId: createStudentUsingPOST
+  requestBody:
+    description: student
+    content:
+      application/json:
+        schema:
+          $ref: ..\components\schemas\Student.yaml
+    required: true
+  responses:
+    '200':
+      description: OK
+      content:
+        '*/*':
+          schema:
+            $ref: ..\components\schemas\ResponseEntity.yaml
+    '201':
+      description: Created
+      content: {}
+    '401':
+      description: Unauthorized
+      content: {}
+    '403':
+      description: Forbidden
+      content: {}
+    '404':
+      description: Not Found
+      content: {}
+  deprecated: false
+  x-codegen-request-body-name: student

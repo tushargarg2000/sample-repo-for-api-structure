@@ -1,0 +1,160 @@
+get:
+  tags:
+    - basic-error-controller
+  summary: errorHtml
+  operationId: errorHtmlUsingGET
+  responses:
+    '200':
+      description: OK
+      content:
+        text/html:
+          schema:
+            $ref: ..\components\schemas\ModelAndView.yaml
+    '401':
+      description: Unauthorized
+      content: {}
+    '403':
+      description: Forbidden
+      content: {}
+    '404':
+      description: Not Found
+      content: {}
+  deprecated: false
+put:
+  tags:
+    - basic-error-controller
+  summary: errorHtml
+  operationId: errorHtmlUsingPUT
+  responses:
+    '200':
+      description: OK
+      content:
+        text/html:
+          schema:
+            $ref: ..\components\schemas\ModelAndView.yaml
+    '201':
+      description: Created
+      content: {}
+    '401':
+      description: Unauthorized
+      content: {}
+    '403':
+      description: Forbidden
+      content: {}
+    '404':
+      description: Not Found
+      content: {}
+  deprecated: false
+post:
+  tags:
+    - basic-error-controller
+  summary: errorHtml
+  operationId: errorHtmlUsingPOST
+  responses:
+    '200':
+      description: OK
+      content:
+        text/html:
+          schema:
+            $ref: ..\components\schemas\ModelAndView.yaml
+    '201':
+      description: Created
+      content: {}
+    '401':
+      description: Unauthorized
+      content: {}
+    '403':
+      description: Forbidden
+      content: {}
+    '404':
+      description: Not Found
+      content: {}
+  deprecated: false
+delete:
+  tags:
+    - basic-error-controller
+  summary: errorHtml
+  operationId: errorHtmlUsingDELETE
+  responses:
+    '200':
+      description: OK
+      content:
+        text/html:
+          schema:
+            $ref: ..\components\schemas\ModelAndView.yaml
+    '204':
+      description: No Content
+      content: {}
+    '401':
+      description: Unauthorized
+      content: {}
+    '403':
+      description: Forbidden
+      content: {}
+  deprecated: false
+options:
+  tags:
+    - basic-error-controller
+  summary: errorHtml
+  operationId: errorHtmlUsingOPTIONS
+  responses:
+    '200':
+      description: OK
+      content:
+        text/html:
+          schema:
+            $ref: ..\components\schemas\ModelAndView.yaml
+    '204':
+      description: No Content
+      content: {}
+    '401':
+      description: Unauthorized
+      content: {}
+    '403':
+      description: Forbidden
+      content: {}
+  deprecated: false
+head:
+  tags:
+    - basic-error-controller
+  summary: errorHtml
+  operationId: errorHtmlUsingHEAD
+  responses:
+    '200':
+      description: OK
+      content:
+        text/html:
+          schema:
+            $ref: ..\components\schemas\ModelAndView.yaml
+    '204':
+      description: No Content
+      content: {}
+    '401':
+      description: Unauthorized
+      content: {}
+    '403':
+      description: Forbidden
+      content: {}
+  deprecated: false
+patch:
+  tags:
+    - basic-error-controller
+  summary: errorHtml
+  operationId: errorHtmlUsingPATCH
+  responses:
+    '200':
+      description: OK
+      content:
+        text/html:
+          schema:
+            $ref: ..\components\schemas\ModelAndView.yaml
+    '204':
+      description: No Content
+      content: {}
+    '401':
+      description: Unauthorized
+      content: {}
+    '403':
+      description: Forbidden
+      content: {}
+  deprecated: false

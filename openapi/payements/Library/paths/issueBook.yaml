@@ -1,0 +1,40 @@
+post:
+  tags:
+    - transaction-controller
+  summary: issueBook
+  operationId: issueBookUsingPOST
+  parameters:
+    - name: bookId
+      in: query
+      description: bookId
+      required: true
+      schema:
+        type: integer
+        format: int32
+    - name: cardId
+      in: query
+      description: cardId
+      required: true
+      schema:
+        type: integer
+        format: int32
+  responses:
+    '200':
+      description: OK
+      content:
+        '*/*':
+          schema:
+            $ref: ..\components\schemas\ResponseEntity.yaml
+    '201':
+      description: Created
+      content: {}
+    '401':
+      description: Unauthorized
+      content: {}
+    '403':
+      description: Forbidden
+      content: {}
+    '404':
+      description: Not Found
+      content: {}
+  deprecated: false

@@ -1,0 +1,30 @@
+title: Book
+type: object
+properties:
+  author:
+    $ref: .\Author.yaml
+  available:
+    type: boolean
+  card:
+    $ref: .\Card.yaml
+  genre:
+    type: string
+    enum:
+      - FICTIONAL
+      - NON_FICTIONAL
+      - GEOGRAPHY
+      - HISTORY
+      - POLITICAL_SCIENCE
+      - BOTANY
+      - CHEMISTRY
+      - MATHEMATICS
+      - PHYSICS
+  id:
+    type: integer
+    format: int32
+  name:
+    type: string
+  transactions:
+    type: array
+    items:
+      $ref: .\Transaction.yaml
