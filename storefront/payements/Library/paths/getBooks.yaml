@@ -1,0 +1,39 @@
+get:
+  tags:
+    - book-controller
+  summary: getBooks
+  operationId: getBooksUsingGET
+  parameters:
+    - name: author
+      in: query
+      description: author
+      schema:
+        type: string
+    - name: available
+      in: query
+      description: available
+      schema:
+        type: boolean
+        default: false
+    - name: genre
+      in: query
+      description: genre
+      schema:
+        type: string
+  responses:
+    '200':
+      description: OK
+      content:
+        '*/*':
+          schema:
+            $ref: ..\components\schemas\ResponseEntity.yaml
+    '401':
+      description: Unauthorized
+      content: {}
+    '403':
+      description: Forbidden
+      content: {}
+    '404':
+      description: Not Found
+      content: {}
+  deprecated: false

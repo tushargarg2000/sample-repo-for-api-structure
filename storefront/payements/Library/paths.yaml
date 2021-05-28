@@ -1,0 +1,30 @@
+delete:
+  tags:
+    - student-controller
+  summary: deleteStudent
+  operationId: deleteStudentUsingDELETE
+  parameters:
+    - name: id
+      in: query
+      description: id
+      required: true
+      schema:
+        type: integer
+        format: int32
+  responses:
+    '200':
+      description: OK
+      content:
+        '*/*':
+          schema:
+            $ref: '#/components/schemas/ResponseEntity'
+    '204':
+      description: No Content
+      content: {}
+    '401':
+      description: Unauthorized
+      content: {}
+    '403':
+      description: Forbidden
+      content: {}
+  deprecated: false

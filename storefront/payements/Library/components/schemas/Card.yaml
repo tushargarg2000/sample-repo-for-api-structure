@@ -1,0 +1,23 @@
+title: Card
+type: object
+properties:
+  books:
+    type: array
+    items:
+      $ref: .\Book.yaml
+  cardStatus:
+    type: string
+    enum:
+      - ACTIVATED
+      - DEACTIVATED
+  createdOn:
+    type: string
+    format: date
+  id:
+    type: integer
+    format: int32
+  student:
+    $ref: .\Student.yaml
+  updatedOn:
+    type: string
+    format: date

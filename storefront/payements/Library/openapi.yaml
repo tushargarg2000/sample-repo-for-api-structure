@@ -1,0 +1,46 @@
+openapi: 3.0.1
+info:
+  title: Api Documentation
+  description: Api Documentation
+  termsOfService: 'urn:tos'
+  contact: {}
+  license:
+    name: Apache 2.0
+    url: 'http://www.apache.org/licenses/LICENSE-2.0'
+  version: '1.0'
+servers:
+  - url: '//localhost:8080/'
+tags:
+  - name: author-controller
+    description: Author Controller
+  - name: basic-error-controller
+    description: Basic Error Controller
+  - name: book-controller
+    description: Book Controller
+  - name: student-controller
+    description: Student Controller
+  - name: transaction-controller
+    description: Transaction Controller
+paths:
+  /:
+    $ref: paths.yaml
+  /createAuthor:
+    $ref: paths\createAuthor.yaml
+  /createBook:
+    $ref: paths\createBook.yaml
+  /createStudent:
+    $ref: paths\createStudent.yaml
+  /error:
+    $ref: paths\error.yaml
+  /getAuthor:
+    $ref: paths\getAuthor.yaml
+  /getBooks:
+    $ref: paths\getBooks.yaml
+  /getStudent:
+    $ref: paths\getStudent.yaml
+  /issueBook:
+    $ref: paths\issueBook.yaml
+  /returnBook:
+    $ref: paths\returnBook.yaml
+  /updateStudent:
+    $ref: paths\updateStudent.yaml

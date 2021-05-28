@@ -1,0 +1,26 @@
+title: Transaction
+type: object
+properties:
+  book:
+    $ref: .\Book.yaml
+  card:
+    $ref: .\Card.yaml
+  fineAmount:
+    type: integer
+    format: int32
+  id:
+    type: integer
+    format: int32
+  issueOperation:
+    type: boolean
+  transactionDate:
+    type: string
+    format: date-time
+  transactionId:
+    type: string
+  transactionStatus:
+    type: string
+    enum:
+      - SUCCESSFUL
+      - FAILED
+      - PENDING
