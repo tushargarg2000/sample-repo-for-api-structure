@@ -1,0 +1,30 @@
+openapi: 3.0.0
+servers:
+  - description: SwaggerHub API Auto Mocking
+    url: 'https://virtserver.swaggerhub.com/myntra179/OAuth2-version/1.0.0'
+info:
+  version: 1.0.0
+  title: Sample Access Code Flow OAuth2 Project
+  description: >-
+    This is an example of using OAuth2 Access Code Flow in a specification to
+    describe security to your API.
+security:
+  - accessCode:
+      - read
+      - write
+paths:
+  /example:
+    $ref: paths\example.yaml
+  /ping:
+    $ref: paths\ping.yaml
+components:
+  securitySchemes:
+    accessCode:
+      type: oauth2
+      flows:
+        authorizationCode:
+          authorizationUrl: 'http://example.com/oauth/auth'
+          tokenUrl: 'http://example.com/oauth/token'
+          scopes:
+            write: allows modifying resources
+            read: allows reading resources

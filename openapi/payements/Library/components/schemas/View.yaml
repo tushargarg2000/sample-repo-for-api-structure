@@ -1,0 +1,5 @@
+title: View
+type: object
+properties:
+  contentType:
+    type: string

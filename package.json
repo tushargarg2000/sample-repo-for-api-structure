@@ -2,7 +2,9 @@
   "name": "tusharapi",
   "version": "1.0.0",
   "dependencies": {
-    "@redocly/openapi-cli": "^1.0.0-beta.47"
+    "@openapitools/openapi-generator-cli": "^2.3.3",
+    "@redocly/openapi-cli": "^1.0.0-beta.47",
+    "swagger-ui-express": "^4.1.6"
   },
   "private": true,
   "scripts": {
